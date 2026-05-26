@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { TrendingUp, Users, Globe, Award, Building2, DollarSign, ChevronDown } from 'lucide-react';
 import { metrics } from '../data/portfolioData';
+import photoHero from '../assets/photo-hero.jpg';
 
 const iconMap = { TrendingUp, DollarSign, Users, Globe, Award, Building2 };
 
@@ -142,23 +143,16 @@ export default function Hero() {
                 className="absolute inset-0 rounded-full blur-xl opacity-30"
                 style={{ background: '#00D1C1', transform: 'scale(1.1)' }}
               />
-              {/* Photo container — sustituir src por foto real */}
-              {/* NOTA PARA EDITAR: Reemplaza el div de abajo por <img src="/assets/foto-nico.jpg" ... /> */}
+              {/* Foto real */}
               <div
-                className="relative w-64 h-64 md:w-80 md:h-80 rounded-full flex items-center justify-center text-center overflow-hidden"
-                style={{
-                  background: 'linear-gradient(135deg, #0B2545, #071827)',
-                  border: '2px solid rgba(0,209,193,0.3)',
-                }}
+                className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden"
+                style={{ border: '2px solid rgba(0,209,193,0.3)' }}
               >
-                <div>
-                  <div className="text-5xl mb-2">👤</div>
-                  <p className="text-xs" style={{ color: '#A7B0BA' }}>
-                    Foto personal
-                    <br />
-                    <span style={{ color: '#00D1C1' }}>→ sustituir aquí</span>
-                  </p>
-                </div>
+                <img
+                  src={photoHero}
+                  alt="Nico Vergés Redón en el Taj Mahal, India"
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
             </div>
           </motion.div>

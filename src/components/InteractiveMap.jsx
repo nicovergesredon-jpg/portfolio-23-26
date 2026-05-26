@@ -8,9 +8,10 @@ import {
   Sphere,
   Graticule,
 } from 'react-simple-maps';
-import { MapPin, X, Plane } from 'lucide-react';
+import { MapPin, X, Plane, Users } from 'lucide-react';
 import SectionHeader from './SectionHeader';
 import { countries } from '../data/portfolioData';
+import photoTeam from '../assets/photo-team.jpg';
 
 // Loaded asynchronously from public/ (not bundled, faster initial load)
 const GEO_URL = '/countries-110m.json';
@@ -516,6 +517,48 @@ export default function InteractiveMap() {
             </motion.div>
           ))}
         </div>
+
+        {/* ── Foto equipo Intra Barcelona en el Taj Mahal ── */}
+        <motion.div
+          className="mt-10 rounded-2xl overflow-hidden"
+          style={{ border: '1px solid rgba(0,209,193,0.1)' }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+        >
+          <div className="relative">
+            <img
+              src={photoTeam}
+              alt="Equipo Intra Barcelona en el Taj Mahal, India — Business Mission Asia 2026"
+              className="w-full object-cover"
+              style={{ maxHeight: '420px', objectPosition: 'center 30%' }}
+            />
+            {/* Overlay gradient */}
+            <div
+              className="absolute inset-0"
+              style={{
+                background: 'linear-gradient(to top, rgba(7,24,39,0.85) 0%, transparent 50%)',
+              }}
+            />
+            {/* Caption */}
+            <div className="absolute bottom-0 left-0 right-0 p-6">
+              <div className="flex items-center gap-2 mb-1">
+                <Users size={14} color="#00D1C1" />
+                <span className="text-xs font-bold uppercase tracking-wider" style={{ color: '#00D1C1' }}>
+                  Equipo Intra Barcelona · BM3 Asia
+                </span>
+              </div>
+              <p className="text-white font-bold text-base">
+                Taj Mahal, Agra — India, 2026
+              </p>
+              <p className="text-xs mt-0.5" style={{ color: '#A7B0BA' }}>
+                Business Mission Asia con todo el equipo de Intra Barcelona
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
       </div>
     </section>
   );
