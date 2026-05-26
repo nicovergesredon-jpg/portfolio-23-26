@@ -15,7 +15,7 @@ import imgConstitucion from '../assets/tl-constitucion.jpg';
 // index → { src, fit, position }
 // fit: 'cover' for photos, 'contain' for logos
 const PHOTOS = {
-  0: { src: imgConstitucion, fit: 'cover',    pos: 'center' },
+  0: { src: imgConstitucion, fit: 'contain',  pos: 'center', bg: '#0B2545' },
   1: { src: imgFinlandia,    fit: 'cover',    pos: 'center 80%' },
   2: { src: imgUrsus,        fit: 'contain',  pos: 'center', bg: 'white' },
   3: { src: imgIntra,        fit: 'contain',  pos: 'center', bg: '#071827' },

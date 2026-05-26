@@ -48,8 +48,8 @@ function StatCard({ metric, index }) {
         </div>
       )}
       <motion.div
-        className="text-3xl md:text-4xl font-black mb-1"
-        style={{ color: '#00D1C1' }}
+        className="text-xl md:text-2xl font-black mb-1 leading-tight"
+        style={{ color: '#00D1C1', wordBreak: 'break-word' }}
         initial={{ opacity: 0 }}
         animate={inView ? { opacity: 1 } : {}}
         transition={{ duration: 0.4, delay: 0.2 + index * 0.08 }}
