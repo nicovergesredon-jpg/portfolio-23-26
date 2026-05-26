@@ -145,13 +145,14 @@ export default function Hero() {
               />
               {/* Foto real */}
               <div
-                className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden"
+                className="relative w-80 h-80 md:w-[420px] md:h-[420px] rounded-full overflow-hidden"
                 style={{ border: '2px solid rgba(0,209,193,0.3)' }}
               >
                 <img
                   src={photoHero}
                   alt="Nico Vergés Redón en el Taj Mahal, India"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: 'center 12%' }}
                 />
               </div>
             </div>
