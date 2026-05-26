@@ -13,7 +13,7 @@ export const personalInfo = {
   emailPro: "nico@senior-labs.com",
   phone: "694 45 77 74",
   linkedin: "https://www.linkedin.com/in/", // Añadir URL completa
-  seniorLabsUrl: "#", // Añadir URL de Senior Labs
+  seniorLabsUrl: "http://senior-labs.com/",
 };
 
 export const metrics = [
