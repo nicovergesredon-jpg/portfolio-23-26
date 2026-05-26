@@ -15,14 +15,14 @@ import imgConstitucion from '../assets/tl-constitucion.jpg';
 // index → { src, fit, position }
 // fit: 'cover' for photos, 'contain' for logos
 const PHOTOS = {
-  1: { src: imgFinlandia,    fit: 'cover',    pos: 'center' },
+  0: { src: imgConstitucion, fit: 'cover',    pos: 'center' },
+  1: { src: imgFinlandia,    fit: 'cover',    pos: 'center 80%' },
   2: { src: imgUrsus,        fit: 'contain',  pos: 'center', bg: 'white' },
   3: { src: imgIntra,        fit: 'contain',  pos: 'center', bg: '#071827' },
   4: { src: imgCostaRica,    fit: 'cover',    pos: 'center' },
   5: { src: imgAurea,        fit: 'cover',    pos: 'center top' },
   6: { src: imgSeniorLabs,   fit: 'contain',  pos: 'center', bg: '#071827' },
-  7: { src: imgAsia,         fit: 'cover',    pos: 'center' },
-  8: { src: imgConstitucion, fit: 'cover',    pos: 'center' },
+  7: { src: imgAsia,         fit: 'contain',  pos: 'center', bg: '#0B2545' },
 };
 
 const tagColors = {
