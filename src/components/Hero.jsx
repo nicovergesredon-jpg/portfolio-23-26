@@ -87,7 +87,7 @@ export default function Hero() {
               className="mt-6 text-xl md:text-2xl font-semibold text-white leading-snug"
               {...fadeUp(0.35)}
             >
-              Emprendedor adaptable, estratega de negocio y constructor de proyectos reales.
+              Emprendedor, Líder y Creador de proyectos reales.
             </motion.p>
 
             <motion.p

@@ -455,35 +455,35 @@ export const tools = [
 
 export const learnings = [
   {
-    title: "Adaptarse es una ventaja competitiva",
-    text: "No siempre gana quien más sabe de un sector, sino quien entiende rápido el contexto, escucha bien y actúa con criterio.",
+    title: "Adaptarse o quedarse atrás",
+    text: "He entrado en sectores que no conocía, con clientes que no esperaba y en países que no imaginaba. Cada vez que funcionó, no fue porque supiera más — fue porque escuché antes de hablar y actué sin esperar a tener todo claro.",
   },
   {
-    title: "Liderar es comunicar",
-    text: "Ser Team Leader me enseñó que liderar no es solo tomar decisiones, sino generar claridad, sostener conversaciones difíciles y acompañar al equipo hacia un objetivo común.",
+    title: "Liderar no es lo que pensaba",
+    text: "Cuando entré como Team Leader en Intra pensé que liderar era tomar las decisiones buenas. Me equivoqué. Liderar es estar cuando alguien del equipo se bloquea, decir lo que nadie quiere decir y mantener el rumbo cuando todo parece caótico.",
   },
   {
-    title: "Vender es escuchar",
-    text: "Después de más de 1.600 visitas a clientes que hemos realizado como equipo en Intra Barcelona, hemos aprendido que vender no consiste en convencer, sino en detectar necesidades reales, hacer buenas preguntas y construir confianza.",
+    title: "Vender es escuchar, no convencer",
+    text: "Hemos hecho más de 1.600 visitas a clientes con Intra Barcelona. La mayoría de las veces que algo no salió, fue porque hablamos demasiado. Cuando funcionó, fue porque preguntamos bien y escuchamos de verdad.",
   },
   {
-    title: "La tecnología solo tiene sentido si mejora vidas",
-    text: "Senior Labs me ha enseñado que la IA y la automatización tienen verdadero valor cuando ayudan a personas reales a ganar autonomía, conexión y calidad de vida.",
+    title: "La tecnología sin personas no sirve de nada",
+    text: "Trabajando con personas mayores en Senior Labs entendí algo que no me enseñaron en ningún aula: da igual lo buena que sea la herramienta si la persona que la usa se siente sola delante de una pantalla.",
   },
   {
-    title: "El impacto necesita estructura",
-    text: "Los proyectos sociales no solo necesitan propósito. También necesitan modelo de negocio, financiación, procesos, equipo, métricas y relación institucional.",
+    title: "Querer cambiar algo no es suficiente",
+    text: "Lo aprendí con Aurea: puedes tener toda la energía del mundo y aun así no llegar a nadie si no tienes un modelo, financiación y un equipo que funcione. El propósito sin estructura no escala.",
   },
   {
-    title: "La financiación pública exige estrategia",
-    text: "Acceder a subvenciones y licitaciones requiere entender prioridades institucionales, medir impacto y construir propuestas sólidas.",
+    title: "Las subvenciones tienen su propio idioma",
+    text: "Las subvenciones no las gana quien mejor hace el bien. Las gana quien mejor explica, documenta y encaja en lo que la administración está buscando. Es un lenguaje diferente, y hay que aprenderlo.",
   },
   {
-    title: "La incidencia política forma parte del emprendimiento",
-    text: "En proyectos vinculados a impacto social, no basta con crear una solución. También hay que dialogar con instituciones y contribuir a cambiar cómo se aborda un problema.",
+    title: "El cambio real también pasa por las instituciones",
+    text: "En proyectos de impacto social aprendes rápido que no puedes cambiarlo todo desde abajo. Hay que saber hablar también con quien toma decisiones, y hacerlo en sus términos.",
   },
   {
-    title: "El mundo es más grande que tu mercado",
-    text: "Las experiencias en Corea, India, Costa Rica, Finlandia y otros países me han ayudado a entender que cada contexto tiene sus propias reglas, necesidades y oportunidades.",
+    title: "Lo de aquí no es lo único que funciona",
+    text: "Corea tiene un sistema de cuidados a personas mayores que España tardará años en tener. India tiene talento que busca oportunidades. Costa Rica lleva décadas haciendo cosas que aquí empiezan ahora. Viajar me enseñó a no dar por sentado que la mejor solución siempre viene de cerca.",
   },
 ];
