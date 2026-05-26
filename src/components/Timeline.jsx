@@ -2,13 +2,36 @@ import { motion } from 'framer-motion';
 import SectionHeader from './SectionHeader';
 import { timeline } from '../data/portfolioData';
 
+// ── Photos for each timeline entry (by index) ────────────────────────────────
+import imgFinlandia   from '../assets/tl-finlandia.jpg';
+import imgUrsus       from '../assets/tl-ursus.png';
+import imgIntra       from '../assets/tl-intra.jpg';
+import imgCostaRica   from '../assets/tl-costarica.jpg';
+import imgAurea       from '../assets/tl-aurea.jpg';
+import imgSeniorLabs  from '../assets/tl-seniorlabs.png';
+import imgAsia        from '../assets/tl-asia.jpg';
+import imgConstitucion from '../assets/tl-constitucion.jpg';
+
+// index → { src, fit, position }
+// fit: 'cover' for photos, 'contain' for logos
+const PHOTOS = {
+  1: { src: imgFinlandia,    fit: 'cover',    pos: 'center' },
+  2: { src: imgUrsus,        fit: 'contain',  pos: 'center', bg: 'white' },
+  3: { src: imgIntra,        fit: 'contain',  pos: 'center', bg: '#071827' },
+  4: { src: imgCostaRica,    fit: 'cover',    pos: 'center' },
+  5: { src: imgAurea,        fit: 'cover',    pos: 'center top' },
+  6: { src: imgSeniorLabs,   fit: 'contain',  pos: 'center', bg: '#071827' },
+  7: { src: imgAsia,         fit: 'cover',    pos: 'center' },
+  8: { src: imgConstitucion, fit: 'cover',    pos: 'center' },
+};
+
 const tagColors = {
-  LEINN: { bg: 'rgba(0,209,193,0.1)', color: '#00D1C1', border: 'rgba(0,209,193,0.2)' },
+  LEINN:         { bg: 'rgba(0,209,193,0.1)',   color: '#00D1C1', border: 'rgba(0,209,193,0.2)' },
   INTERNACIONAL: { bg: 'rgba(127,247,236,0.1)', color: '#7FF7EC', border: 'rgba(127,247,236,0.2)' },
-  PROYECTO: { bg: 'rgba(59,130,246,0.1)', color: '#60A5FA', border: 'rgba(59,130,246,0.2)' },
-  LIDERAZGO: { bg: 'rgba(168,85,247,0.1)', color: '#C084FC', border: 'rgba(168,85,247,0.2)' },
-  IMPACTO: { bg: 'rgba(34,197,94,0.1)', color: '#4ADE80', border: 'rgba(34,197,94,0.2)' },
-  HITO: { bg: 'rgba(251,191,36,0.1)', color: '#FCD34D', border: 'rgba(251,191,36,0.2)' },
+  PROYECTO:      { bg: 'rgba(59,130,246,0.1)',  color: '#60A5FA', border: 'rgba(59,130,246,0.2)' },
+  LIDERAZGO:     { bg: 'rgba(168,85,247,0.1)',  color: '#C084FC', border: 'rgba(168,85,247,0.2)' },
+  IMPACTO:       { bg: 'rgba(34,197,94,0.1)',   color: '#4ADE80', border: 'rgba(34,197,94,0.2)' },
+  HITO:          { bg: 'rgba(251,191,36,0.1)',  color: '#FCD34D', border: 'rgba(251,191,36,0.2)' },
 };
 
 export default function Timeline() {
@@ -35,7 +58,8 @@ export default function Timeline() {
           <div className="flex flex-col gap-8">
             {timeline.map((item, i) => {
               const tc = tagColors[item.tag] || tagColors.PROYECTO;
-              const isRight = i % 2 === 0;
+              const isRight = i % 2 === 0; // card on left → photo on right
+              const photo = PHOTOS[i];
 
               return (
                 <motion.div
@@ -52,7 +76,7 @@ export default function Timeline() {
                     style={{ background: '#00D1C1', boxShadow: '0 0 8px rgba(0,209,193,0.6)' }}
                   />
 
-                  {/* Card — on mobile always full width, on desktop alternate */}
+                  {/* ── Text card ── */}
                   <div
                     className={`ml-14 md:ml-0 w-full md:w-[46%] ${
                       isRight ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'
@@ -96,8 +120,58 @@ export default function Timeline() {
                         <span className="font-semibold" style={{ color: '#00D1C1' }}>Aprendizaje: </span>
                         <span style={{ color: '#A7B0BA' }}>{item.learning}</span>
                       </div>
+
+                      {/* Photo on mobile — below the card text */}
+                      {photo && (
+                        <div className="md:hidden mt-4 rounded-xl overflow-hidden" style={{ height: '160px' }}>
+                          <img
+                            src={photo.src}
+                            alt={item.title}
+                            className="w-full h-full"
+                            style={{
+                              objectFit: photo.fit,
+                              objectPosition: photo.pos,
+                              background: photo.bg || 'transparent',
+                              padding: photo.fit === 'contain' ? '12px' : 0,
+                            }}
+                          />
+                        </div>
+                      )}
                     </div>
                   </div>
+
+                  {/* ── Photo panel — desktop only, opposite side ── */}
+                  {photo && (
+                    <div
+                      className={`hidden md:flex absolute top-0 h-full w-[46%] items-center ${
+                        isRight ? 'right-0 pl-8' : 'left-0 pr-8'
+                      }`}
+                    >
+                      <motion.div
+                        className="w-full rounded-2xl overflow-hidden"
+                        style={{
+                          height: '190px',
+                          background: photo.bg || 'rgba(11,37,69,0.6)',
+                          border: '1px solid rgba(0,209,193,0.1)',
+                        }}
+                        initial={{ opacity: 0, x: isRight ? 20 : -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                      >
+                        <img
+                          src={photo.src}
+                          alt={item.title}
+                          className="w-full h-full"
+                          style={{
+                            objectFit: photo.fit,
+                            objectPosition: photo.pos,
+                            padding: photo.fit === 'contain' ? '16px' : 0,
+                          }}
+                        />
+                      </motion.div>
+                    </div>
+                  )}
                 </motion.div>
               );
             })}
